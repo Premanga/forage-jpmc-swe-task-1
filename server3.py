@@ -30,7 +30,6 @@ from datetime import timedelta, datetime
 # from itertools import izip
 from random import normalvariate, random
 from socketserver import ThreadingMixIn
-
 import dateutil.parser
 
 ################################################################################
@@ -303,7 +302,7 @@ class App(object):
         print('Query received @ t%s' % t)
         return [{
             'id': x and x.get('id', None),
-            'stock': 'ABC',
+            'stock': 'tata_steel',
             'timestamp': str(t),
             'top_bid': bids1 and {
                 'price': bids1[0][0],
@@ -316,7 +315,7 @@ class App(object):
         },
             {
                 'id': x and x.get('id', None),
-                'stock': 'DEF',
+                'stock': 'tata_motor',
                 'timestamp': str(t),
                 'top_bid': bids2 and {
                     'price': bids2[0][0],
